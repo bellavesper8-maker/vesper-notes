@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f3f7;
+  color: #333;
+  transition: 0.3s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.app {
+  width: 92%;
+  max-width: 650px;
+  margin: 25px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.theme-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  background: white;
+  cursor: pointer;
+}
+
+.editor {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 7px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+}
+
+textarea {
+  height: 160px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.save-button {
+  width: 100%;
+  margin-top: 8px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+}
+
+#message,
+#lockMessage {
+  text-align: center;
+  min-height: 20px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.notes-header button {
+  background: white;
+}
+
+.note-card {
+  background: white;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.note-card h3 {
+  margin-top: 0;
+}
+
+.note-card p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.note-buttons button {
+  flex: 1;
+}
+
+.edit {
+  background: #555;
+  color: white;
+}
+
+.delete {
+  background: #777;
+  color: white;
+}
+
+.favorite {
+  background: transparent;
+  font-size: 22px;
+  padding: 0;
+}
+
+.lock-button {
+  width: 100%;
+  margin-top: 25px;
+  background: #333;
+  color: white;
+}
+
+.lock-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lock-box {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.lock-box h1 {
+  margin-bottom: 10px;
+}
+
+.lock-box button {
+  width: 100%;
+  margin-top: 10px;
+  background: #333;
+  color: white;
+}
+
+body.dark {
+  background: #17151a;
+  color: #eee;
+}
+
+body.dark header p {
+  color: #aaa;
+}
+
+body.dark .editor,
+body.dark .note-card,
+body.dark .theme-button,
+body.dark .notes-header button,
+body.dark .lock-box {
+  background: #242127;
+  color: #eee;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark #pinInput {
+  background: #302c34;
+  color: white;
+  border-color: #444;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder,
+body.dark #pinInput::placeholder {
+  color: #aaa;
+}
+
+body.dark .save-button,
+body.dark .lock-button,
+body.dark .lock-box button {
+  background: #eee;
+  color: #222;
+}
