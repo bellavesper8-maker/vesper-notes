@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vesper Notes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-box">
+      <h1>Vesper Notes 🤍</h1>
+      <p>أدخلي رمز القفل 🔐</p>
+
+      <input
+        type="password"
+        id="pinInput"
+        inputmode="numeric"
+        maxlength="4"
+        placeholder="••••"
+      >
+
+      <button onclick="unlockApp()">
+        فتح التطبيق 🔓
+      </button>
+
+      <p id="lockMessage"></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+
+    <header>
+      <div>
+        <h1>Vesper Notes 🤍</h1>
+        <p>ملاحظاتك، بطريقتك ✨</p>
+      </div>
+
+      <button class="theme-button" onclick="toggleTheme()">
+        🌙
+      </button>
+    </header>
+
+    <section class="editor">
+
+      <input
+        type="text"
+        id="title"
+        placeholder="عنوان الملاحظة"
+      >
+
+      <textarea
+        id="note"
+        placeholder="اكتبي ملاحظتك هون..."
+      ></textarea>
+
+      <button class="save-button" onclick="saveNote()">
+        حفظ الملاحظة 💾
+      </button>
+
+      <p id="message"></p>
+
+    </section>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="ابحثي عن ملاحظة 🔎"
+      oninput="displayNotes()"
+    >
+
+    <div class="notes-header">
+      <h2>ملاحظاتي 📝</h2>
+
+      <button onclick="showFavorites()">
+        ⭐ المفضلة
+      </button>
+    </div>
+
+    <div id="notesList"></div>
+
+    <button class="lock-button" onclick="lockApp()">
+      🔒 قفل التطبيق
+    </button>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
